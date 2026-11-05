@@ -1,0 +1,193 @@
+import { Room } from '../types';
+
+export const initialRooms: Room[] = [
+  {
+    id: 'room-101',
+    roomNumber: '101',
+    name: 'Presidential Royal Suite',
+    type: 'Suite',
+    floor: 1,
+    roomSize: 580,
+    bedType: 'King Bed',
+    maxAdults: 2,
+    maxChildren: 2,
+    pricePerNight: 180,
+    discount: 15,
+    description: 'An expansive luxury suite featuring a private balcony with panoramic garden views, marble en-suite bathroom, deep soaking bathtub, walk-in closet, and premium espresso lounge.',
+    amenities: ['Free WiFi', 'Air Conditioning', 'King Bed', 'Private Balcony', 'Bathtub', 'Flat-screen TV', 'Mini Bar', 'Espresso Machine', 'Work Desk', 'Room Service'],
+    images: [
+      'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=1200&q=80'
+    ],
+    status: 'Available',
+    isFeatured: true,
+    rating: 4.9,
+    reviewCount: 42
+  },
+  {
+    id: 'room-102',
+    roomNumber: '102',
+    name: 'Executive Deluxe Room',
+    type: 'Deluxe Room',
+    floor: 1,
+    roomSize: 420,
+    bedType: 'Queen Bed',
+    maxAdults: 2,
+    maxChildren: 1,
+    pricePerNight: 120,
+    discount: 10,
+    description: 'Designed for discerning travelers, the Executive Deluxe provides contemporary minimalist elegance, soundproofing, high-speed fiber internet, and a rain shower en-suite.',
+    amenities: ['Free WiFi', 'Air Conditioning', 'Rain Shower', 'Queen Bed', 'Smart TV', 'Tea/Coffee Maker', 'Safe Deposit Box', 'Breakfast Included'],
+    images: [
+      'https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1591088398332-8a7791972843?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=1200&q=80'
+    ],
+    status: 'Occupied',
+    isFeatured: true,
+    rating: 4.8,
+    reviewCount: 38
+  },
+  {
+    id: 'room-103',
+    roomNumber: '103',
+    name: 'Garden Cottage Suite',
+    type: 'Family Room',
+    floor: 1,
+    roomSize: 650,
+    bedType: '1 King + 2 Twin Beds',
+    maxAdults: 4,
+    maxChildren: 2,
+    pricePerNight: 210,
+    discount: 0,
+    description: 'Secluded family sanctuary nestled beside our botanical gardens. Features two interconnected bedrooms, kitchen nook, dining table, and direct terrace access.',
+    amenities: ['Free WiFi', 'Air Conditioning', 'Garden View', 'Terrace', 'Kitchenette', 'Dining Area', 'Free Parking', 'Pet Friendly', 'Daily Housekeeping'],
+    images: [
+      'https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=1200&q=80'
+    ],
+    status: 'Available',
+    isFeatured: true,
+    rating: 4.95,
+    reviewCount: 56
+  },
+  {
+    id: 'room-201',
+    roomNumber: '201',
+    name: 'Superior Double Haven',
+    type: 'Double Room',
+    floor: 2,
+    roomSize: 360,
+    bedType: 'Double Bed',
+    maxAdults: 2,
+    maxChildren: 1,
+    pricePerNight: 95,
+    discount: 5,
+    description: 'Warm and inviting room accented with natural oak furnishings, plush linen bedding, ambient lighting, and views of the courtyard fountain.',
+    amenities: ['Free WiFi', 'Air Conditioning', 'Double Bed', 'Flat-screen TV', 'Mini Fridge', 'Workstation', 'Hair Dryer'],
+    images: [
+      'https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=1200&q=80'
+    ],
+    status: 'Available',
+    isFeatured: false,
+    rating: 4.7,
+    reviewCount: 29
+  },
+  {
+    id: 'room-202',
+    roomNumber: '202',
+    name: 'Classic Single Studio',
+    type: 'Single Room',
+    floor: 2,
+    roomSize: 260,
+    bedType: 'Single Bed',
+    maxAdults: 1,
+    maxChildren: 0,
+    pricePerNight: 65,
+    discount: 0,
+    description: 'Compact, efficient and cozy accommodation tailored for solo travelers, business professionals, and digital nomads seeking comfort and fast WiFi.',
+    amenities: ['Free WiFi', 'Air Conditioning', 'Single Bed', 'Desk & Ergonomic Chair', 'En-suite Shower', 'Daily Breakfast'],
+    images: [
+      'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=1200&q=80'
+    ],
+    status: 'Available',
+    isFeatured: false,
+    rating: 4.6,
+    reviewCount: 22
+  },
+  {
+    id: 'room-203',
+    roomNumber: '203',
+    name: 'Penthouse Panorama Suite',
+    type: 'Suite',
+    floor: 2,
+    roomSize: 720,
+    bedType: 'Super King Bed',
+    maxAdults: 3,
+    maxChildren: 2,
+    pricePerNight: 240,
+    discount: 20,
+    description: 'The crowning gem of our guest house. Boasts a 360-degree wrap-around terrace, private outdoor jacuzzi, vaulted ceilings, and butler service on demand.',
+    amenities: ['Free WiFi', 'Air Conditioning', 'Private Jacuzzi', 'Wrap-around Terrace', 'Super King Bed', 'Living Room', 'Wine Cooler', 'Butler Service', 'Complimentary Champagne'],
+    images: [
+      'https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=1200&q=80'
+    ],
+    status: 'Reserved',
+    isFeatured: true,
+    rating: 5.0,
+    reviewCount: 47
+  },
+  {
+    id: 'room-301',
+    roomNumber: '301',
+    name: 'Heritage Family Suite',
+    type: 'Family Room',
+    floor: 3,
+    roomSize: 520,
+    bedType: 'King Bed + 2 Twin Beds',
+    maxAdults: 4,
+    maxChildren: 2,
+    pricePerNight: 165,
+    discount: 10,
+    description: 'Spacious suite designed for families, featuring two separate bedrooms, custom woodwork, children toys corner, and relaxing city views.',
+    amenities: ['Free WiFi', 'Air Conditioning', 'Connecting Rooms', 'Flat-screen TV', 'Mini Fridge', 'Baby Cot Available', 'Bathtub'],
+    images: [
+      'https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=1200&q=80'
+    ],
+    status: 'Maintenance',
+    isFeatured: false,
+    rating: 4.75,
+    reviewCount: 31
+  },
+  {
+    id: 'room-302',
+    roomNumber: '302',
+    name: 'Skyline Deluxe Room',
+    type: 'Deluxe Room',
+    floor: 3,
+    roomSize: 400,
+    bedType: 'King Bed',
+    maxAdults: 2,
+    maxChildren: 1,
+    pricePerNight: 135,
+    discount: 0,
+    description: 'Perched on the top floor, this bright deluxe room provides breathtaking skyline sunsets, a cozy reading alcove, and luxurious goose-down pillows.',
+    amenities: ['Free WiFi', 'Air Conditioning', 'Skyline View', 'King Bed', 'Reading Nook', 'Smart TV', 'Nespresso Machine', 'Bathrobes & Slippers'],
+    images: [
+      'https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1591088398332-8a7791972843?auto=format&fit=crop&w=1200&q=80'
+    ],
+    status: 'Cleaning',
+    isFeatured: false,
+    rating: 4.85,
+    reviewCount: 34
+  }
+];

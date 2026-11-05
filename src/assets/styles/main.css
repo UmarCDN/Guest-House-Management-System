@@ -1,0 +1,480 @@
+/* Luxury Boutique Hospitality Stylesheet */
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+
+:root {
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  --bs-primary: #1a365d;
+  --bs-primary-rgb: 26, 54, 93;
+  --bs-secondary: #64748b;
+  --bs-success: #059669;
+  --bs-info: #0284c7;
+  --bs-warning: #d97706;
+  --bs-danger: #dc2626;
+  --bs-light: #f8fafc;
+  --bs-dark: #0f172a;
+  --gold-accent: #c5a880;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: #1e293b;
+  background-color: #f8fafc;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #0f172a;
+  letter-spacing: -0.02em;
+}
+
+/* Luxury button and badge customizations */
+.btn {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  vertical-align: middle;
+  white-space: nowrap !important;
+}
+
+.btn span {
+  white-space: nowrap !important;
+}
+
+.btn > i,
+.btn > .bi,
+.btn > svg {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  font-size: 1.05em;
+  flex-shrink: 0;
+}
+
+/* Room Card Button Uniform Styling */
+.room-card-btn {
+  height: 42px !important;
+  min-height: 42px !important;
+  font-size: 0.84rem !important;
+  padding: 0 0.5rem !important;
+  white-space: nowrap !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.4rem !important;
+}
+
+/* Custom gap utilities for flex containers */
+.gap-0\.5 { gap: 0.25rem !important; }
+.gap-1\.5 { gap: 0.5rem !important; }
+.gap-2 { gap: 0.5rem !important; }
+.gap-2\.5 { gap: 0.75rem !important; }
+.gap-3\.5 { gap: 1.25rem !important; }
+
+/* Enhanced icon margins outside buttons */
+i.bi.me-1, .bi.me-1 {
+  margin-right: 0.45rem !important;
+}
+
+i.bi.me-1\.5, .bi.me-1\.5 {
+  margin-right: 0.55rem !important;
+}
+
+i.bi.me-2, .bi.me-2 {
+  margin-right: 0.65rem !important;
+}
+
+i.bi.ms-1, .bi.ms-1 {
+  margin-left: 0.45rem !important;
+}
+
+i.bi.ms-2, .bi.ms-2 {
+  margin-left: 0.65rem !important;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn-primary {
+  background-color: #1a365d;
+  border-color: #1a365d;
+  color: #ffffff;
+  box-shadow: 0 2px 6px rgba(26, 54, 93, 0.25);
+}
+
+.btn-primary:hover, .btn-primary:focus {
+  background-color: #0f2c59 !important;
+  border-color: #0f2c59 !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 12px rgba(26, 54, 93, 0.35);
+  transform: translateY(-1px);
+}
+
+.btn-outline-secondary {
+  border-color: #cbd5e1;
+  color: #334155;
+  background-color: #ffffff;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #f1f5f9;
+  border-color: #94a3b8;
+  color: #0f172a;
+  transform: translateY(-1px);
+}
+
+.bg-primary {
+  background-color: #1a365d !important;
+}
+
+.text-primary {
+  color: #1a365d !important;
+}
+
+.border-primary {
+  border-color: #1a365d !important;
+}
+
+.bg-primary-subtle {
+  background-color: rgba(26, 54, 93, 0.1) !important;
+}
+
+.hover-shadow-lg {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hover-shadow-lg:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.12) !important;
+}
+
+.hover-translate-up {
+  transition: transform 0.2s ease;
+}
+
+.hover-translate-up:hover {
+  transform: translateY(-3px);
+}
+
+/* Payment Selection Cards with White Text on Hover/Active */
+.payment-card {
+  position: relative;
+  transition: all 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 2px solid #e2e8f0;
+  cursor: pointer;
+  background-color: #ffffff;
+}
+
+.payment-card:hover {
+  background-color: #1a365d !important;
+  border-color: #1a365d !important;
+  color: #ffffff !important;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(26, 54, 93, 0.25) !important;
+}
+
+.payment-card:hover h6,
+.payment-card:hover small,
+.payment-card:hover span,
+.payment-card:hover i,
+.payment-card:hover div,
+.payment-card:hover .text-dark,
+.payment-card:hover .text-muted,
+.payment-card:hover .text-primary,
+.payment-card:hover .text-success,
+.payment-card:hover .text-warning,
+.payment-card:hover .text-danger,
+.payment-card:hover .fs-3 {
+  color: #ffffff !important;
+}
+
+.payment-card:hover small,
+.payment-card:hover .text-muted {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.payment-card.active {
+  background-color: #1a365d !important;
+  border-color: #1a365d !important;
+  color: #ffffff !important;
+  box-shadow: 0 10px 25px rgba(26, 54, 93, 0.25) !important;
+}
+
+.payment-card.active h6,
+.payment-card.active span,
+.payment-card.active i,
+.payment-card.active div,
+.payment-card.active .text-dark,
+.payment-card.active .text-muted,
+.payment-card.active .text-primary,
+.payment-card.active .text-success,
+.payment-card.active .text-warning,
+.payment-card.active .text-danger,
+.payment-card.active .fs-3 {
+  color: #ffffff !important;
+}
+
+.payment-card.active small,
+.payment-card.active .text-muted {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+/* Visual Room Rack Cards with White Text on Hover & Selected */
+.room-rack-card {
+  position: relative;
+  transition: all 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  background-color: #ffffff;
+}
+
+.room-rack-card:hover,
+.room-rack-card.selected {
+  background-color: #1a365d !important;
+  border-color: #1a365d !important;
+  color: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(26, 54, 93, 0.28) !important;
+}
+
+.room-rack-card:hover *,
+.room-rack-card.selected * {
+  color: #ffffff !important;
+}
+
+.room-rack-card:hover h6,
+.room-rack-card:hover small,
+.room-rack-card:hover span,
+.room-rack-card:hover i,
+.room-rack-card:hover div,
+.room-rack-card:hover p,
+.room-rack-card:hover .text-dark,
+.room-rack-card:hover .text-muted,
+.room-rack-card:hover .text-primary,
+.room-rack-card:hover .text-secondary,
+.room-rack-card:hover .font-monospace,
+.room-rack-card.selected h6,
+.room-rack-card.selected small,
+.room-rack-card.selected span,
+.room-rack-card.selected i,
+.room-rack-card.selected div,
+.room-rack-card.selected p,
+.room-rack-card.selected .text-dark,
+.room-rack-card.selected .text-muted,
+.room-rack-card.selected .text-primary,
+.room-rack-card.selected .text-secondary,
+.room-rack-card.selected .font-monospace {
+  color: #ffffff !important;
+}
+
+.room-rack-card:hover small,
+.room-rack-card:hover .text-muted,
+.room-rack-card.selected small,
+.room-rack-card.selected .text-muted {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.room-rack-card:hover .border-top,
+.room-rack-card.selected .border-top {
+  border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.room-rack-card:hover .room-number-badge,
+.room-rack-card.selected .room-number-badge {
+  background-color: rgba(255, 255, 255, 0.22) !important;
+  color: #ffffff !important;
+}
+
+.room-rack-card:hover .btn,
+.room-rack-card.selected .btn {
+  background-color: #ffffff !important;
+  border-color: #ffffff !important;
+  color: #1a365d !important;
+  font-weight: 700 !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important;
+}
+
+.room-rack-card.disabled:not(.selected) {
+  opacity: 0.75;
+  cursor: not-allowed;
+}
+
+.room-rack-card.disabled:not(.selected):hover {
+  transform: none;
+  box-shadow: none !important;
+  background-color: #f8fafc !important;
+  border-color: #e2e8f0 !important;
+  color: inherit !important;
+}
+
+.room-rack-card.disabled:not(.selected):hover * {
+  color: inherit !important;
+}
+
+.room-rack-card.disabled:not(.selected):hover .text-muted,
+.room-rack-card.disabled:not(.selected):hover small {
+  color: #64748b !important;
+}
+
+.room-rack-card.disabled:not(.selected):hover .text-dark,
+.room-rack-card.disabled:not(.selected):hover h6 {
+  color: #0f172a !important;
+}
+
+.room-rack-card.disabled:not(.selected):hover .text-primary {
+  color: #1a365d !important;
+}
+
+.room-rack-card.disabled:not(.selected):hover .btn {
+  background-color: #ffffff !important;
+  border-color: #cbd5e1 !important;
+  color: #64748b !important;
+}
+
+/* Sidebar hover utilities */
+.hover-bg-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  color: #ffffff !important;
+}
+
+.hover-bg-secondary:hover * {
+  color: #ffffff !important;
+}
+
+.hover-bg-light:hover {
+  background-color: #f1f5f9 !important;
+  color: #1a365d !important;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.room-card img {
+  transition: transform 0.4s ease;
+}
+
+.room-card:hover img {
+  transform: scale(1.04);
+}
+
+/* Line clamp utilities */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Print Stylesheet */
+@media print {
+  body {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+  }
+
+  header, nav, aside, footer, .d-print-none, .toast-container, .btn, .modal-header .btn-close {
+    display: none !important;
+  }
+
+  main, .container, .container-fluid, .invoice-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+}
+
+/* Room Gallery Showcase & Lightbox */
+.gallery-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  color: #1a365d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 5;
+}
+
+.gallery-nav-btn:hover {
+  background-color: #ffffff;
+  color: #0d6efd;
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+.gallery-nav-btn.prev {
+  left: 16px;
+}
+
+.gallery-nav-btn.next {
+  right: 16px;
+}
+
+.gallery-thumb {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  border: 2px solid transparent;
+  opacity: 0.65;
+}
+
+.gallery-thumb:hover {
+  opacity: 0.95;
+  transform: translateY(-2px);
+}
+
+.gallery-thumb.active {
+  opacity: 1;
+  border-color: #0d6efd !important;
+  box-shadow: 0 4px 12px rgba(13, 110, 253, 0.25);
+}
+
+.gallery-main-container {
+  height: 460px;
+  background-color: #0f172a;
+}
+
+@media (max-width: 768px) {
+  .gallery-main-container {
+    height: 280px;
+  }
+  .gallery-nav-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 0.85rem;
+  }
+}
+
+.lightbox-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(10, 15, 29, 0.94);
+  backdrop-filter: blur(8px);
+  z-index: 1060;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
